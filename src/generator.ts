@@ -1,4 +1,4 @@
-import mustache from 'mustache-bun/mustache.js';
+import mustache from '@ovencord/mustache';
 import { htmlTemplate, css } from './template.ts';
 import type { Message, TranscriptOptions, ChannelInfo, Button, SelectMenu, AnyComponent, ContainerComponent, TextDisplayComponent, SeparatorComponent, ActionRow } from './types.ts';
 // Helper to format Date

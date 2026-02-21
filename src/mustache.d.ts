@@ -1,4 +1,4 @@
-declare module 'mustache-bun/mustache.js' {
+declare module '@ovencord/mustache' {
     export interface MustacheStatic {
         render(template: string, view: any, partials?: any, tags?: any): string;
         escape(text: string): string;
