@@ -371,9 +371,14 @@ a:hover { text-decoration: underline; }
     background-color: var(--background-secondary);
     border: 1px solid rgba(255,255,255,0.05);
     border-radius: 8px;
-    padding: 12px;
+    padding: 16px;
     margin-top: 8px;
-    max-width: 520px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .discord-separator {
