@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Transcript - ticket-001</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+  --background-primary: #313338;
+  --background-secondary: #2b2d31;
+  --background-secondary-alt: #242529;
+  --background-tertiary: #1e1f22;
+  --background-floating: #1e1f22;
+  --background-accent: #404249;
+  --background-modifier-hover: rgba(78, 80, 88, 0.16);
+  --background-modifier-active: rgba(78, 80, 88, 0.24);
+  --background-modifier-selected: rgba(78, 80, 88, 0.32);
+  --text-normal: #dbdee1;
+  --text-muted: #949ba4;
+  --text-link: #00a8fc;
+  --text-positive: #23a559;
+  --text-warning: #f0b232;
+  --text-danger: #f23f43;
+  --header-primary: #f2f3f5;
+  --header-secondary: #b5bac1;
+  --interactive-normal: #b5bac1;
+  --interactive-hover: #dbdee1;
+  --interactive-active: #ffffff;
+  --interactive-muted: #4e5058;
+  --brand-experiment: #5865f2;
+  --brand-experiment-560: #4752c4;
+  --status-online: #23a559;
+  --status-idle: #f0b232;
+  --status-dnd: #f23f43;
+  --status-offline: #80848e;
+  --button-secondary-background: #4e5058;
+  --button-secondary-background-hover: #6d6f78;
+  --button-secondary-background-active: #80848e;
+  --button-danger-background: #da373c;
+  --button-danger-background-hover: #a12828;
+  --button-danger-background-active: #892222;
+  --button-positive-background: #248046;
+  --button-positive-background-hover: #1a6334;
+  --button-positive-background-active: #15522b;
+  --mention-background: rgba(88, 101, 242, 0.3);
+  --mention-foreground: #dee0fc;
+  --mention-hover-background: rgba(88, 101, 242, 0.6);
+  --embed-background: #2b2d31;
+  --embed-background-alternate: #242529;
+  --message-margin-horizontal: 16px;
+  --message-margin-vertical: 1.0625rem;
+  --avatar-size: 40px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  font-family: 'gg sans', 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.guild-header {
+  background-color: var(--background-primary);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 48px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 1.5px 0 rgba(0,0,0,0.05), 0 2px 0 rgba(0,0,0,0.05);
+}
+
+.guild-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.guild-info h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--header-primary);
+  margin: 0;
+}
+
+.channel-info {
+  font-size: 0.875rem;
+  color: var(--header-secondary);
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 1px solid var(--background-modifier-active);
+}
+
+.chatlog { padding: 0; }
+
+.message-group {
+    display: flex;
+    margin-top: var(--message-margin-vertical);
+    padding: 2px 16px;
+    position: relative;
+}
+
+.message-group:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.author-avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.message-content-wrapper { flex: 1; min-width: 0; }
+
+.message-header {
+    display: flex;
+    align-items: center;
+    line-height: 1.375rem;
+}
+
+.author-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--header-primary);
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+
+.author-name:hover { text-decoration: underline; }
+
+.bot-tag {
+    background-color: var(--brand-experiment);
+    color: #ffffff;
+    font-size: 0.725rem;
+    text-transform: uppercase;
+    height: 0.9375rem;
+    padding: 0 4.8px;
+    border-radius: 3px;
+    line-height: 0.9375rem;
+    font-weight: 600;
+    margin-left: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+    position: relative;
+    top: -1px;
+}
+
+.bot-tag svg {
+    margin-right: 2px;
+    width: 1rem;
+    height: 1rem;
+    margin-inline-start: -0.2rem;
+    margin-top: -0.02rem;
+}
+
+.bot-tag-text {
+    line-height: 0.9375rem;
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+.message-body {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: var(--text-normal);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 2px;
+}
+
+.mention {
+    background-color: var(--mention-background);
+    color: var(--mention-foreground);
+    border-radius: 3px;
+    padding: 0 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mention:hover {
+    background-color: var(--mention-hover-background);
+    color: #ffffff;
+}
+
+.reply-reference {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    margin-left: 56px;
+    position: relative;
+}
+
+.reply-reference::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -33px;
+    bottom: 0;
+    border-top: 2px solid #4e5058;
+    border-left: 2px solid #4e5058;
+    border-top-left-radius: 6px;
+    width: 33px;
+    height: 10px;
+}
+
+.reply-avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.reply-user {
+    font-weight: 500;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.reply-user:hover { text-decoration: underline; }
+
+.reply-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.embed {
+    display: flex;
+    max-width: 520px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--background-tertiary);
+    margin-top: 8px;
+    padding: 8px 16px 16px 12px;
+    position: relative;
+}
+
+.embed-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.embed-author {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.embed-author-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.embed-author-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--header-primary);
+}
+
+.embed-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-link);
+    margin-bottom: 4px;
+}
+
+.embed-description {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: var(--text-normal);
+    white-space: pre-wrap;
+}
+
+.embed-fields {
+    display: grid;
+    grid-gap: 8px;
+    margin-top: 8px;
+}
+
+.embed-field-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--header-primary);
+    margin-bottom: 2px;
+}
+
+.embed-field-value {
+    font-size: 0.875rem;
+    color: var(--text-normal);
+    white-space: pre-wrap;
+}
+
+.embed-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.embed-footer-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.embed-footer-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.message-component-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.discord-button {
+    height: 32px;
+    min-width: 60px;
+    padding: 2px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.17s ease;
+}
+
+.discord-button-primary { background-color: var(--brand-experiment); }
+.discord-button-primary:hover { background-color: var(--brand-experiment-560); }
+.discord-button-secondary { background-color: var(--button-secondary-background); }
+.discord-button-secondary:hover { background-color: var(--button-secondary-background-hover); }
+.discord-button-success { background-color: var(--button-positive-background); }
+.discord-button-success:hover { background-color: var(--button-positive-background-hover); }
+.discord-button-destructive { background-color: var(--button-danger-background); }
+.discord-button-destructive:hover { background-color: var(--button-danger-background-hover); }
+
+.discord-container {
+    background-color: var(--background-secondary);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 8px;
+    max-width: 520px;
+}
+
+.discord-separator {
+    height: 1px;
+    background-color: rgba(255,255,255,0.05);
+    margin: 8px 0;
+}
+</style></head><body><header class='guild-header'><img src='https://cdn.discordapp.com/icons/887462826343510046/c9066666879e69c4fae958155bb3a8f9.png' alt='Guild Icon' class='guild-icon'><div class='guild-info'><h1>ticket-001</h1></div><div class='channel-info'>Support ticket for User #123</div></header><div class='chatlog'><div class='message-group' id='message-1'><img src='https://cdn.discordapp.com/embed/avatars/0.png' class='author-avatar' alt='Customer'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Customer</span><span class='timestamp'>01/25/2026, 11:07 PM</span></div><div class='message-body'>Hello, I need help with my account.</div></div></div><div class='message-group' id='message-2'><img src='https://cdn.discordapp.com/embed/avatars/1.png' class='author-avatar' alt='Support Bot'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Support Bot</span><span class='bot-tag'><svg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path fill='white' fill-rule='evenodd' d='M19.06 6.94a1.5 1.5 0 0 1 0 2.12l-8 8a1.5 1.5 0 0 1-2.12 0l-4-4a1.5 1.5 0 0 1 2.12-2.12L10 13.88l6.94-6.94a1.5 1.5 0 0 1 2.12 0Z' clip-rule='evenodd'></path></svg><span class='bot-tag-text'>APP</span></span><span class='timestamp'>01/25/2026, 11:09 PM</span></div><div class='message-body'>Hi! <b>Support Bot</b> here. What seems to be the issue?</div></div></div><div class='message-group' id='message-3'><img src='https://cdn.discordapp.com/embed/avatars/0.png' class='author-avatar' alt='Customer'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Customer</span><span class='timestamp'>01/25/2026, 11:10 PM</span></div><div class='message-body'>I cannot login. Here is a screenshot:</div><div class='attachment attachment-image'><a href='https://via.placeholder.com/350x150' target='_blank'><img src='https://via.placeholder.com/350x150' alt='screenshot.png' style='max-width: 100%; max-height: 350px; border-radius: 4px; margin-top: 8px;'></a></div></div></div><div class='message-group' id='message-4'><img src='https://cdn.discordapp.com/embed/avatars/1.png' class='author-avatar' alt='Support Bot'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Support Bot</span><span class='bot-tag'><svg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path fill='white' fill-rule='evenodd' d='M19.06 6.94a1.5 1.5 0 0 1 0 2.12l-8 8a1.5 1.5 0 0 1-2.12 0l-4-4a1.5 1.5 0 0 1 2.12-2.12L10 13.88l6.94-6.94a1.5 1.5 0 0 1 2.12 0Z' clip-rule='evenodd'></path></svg><span class='bot-tag-text'>APP</span></span><span class='timestamp'>01/25/2026, 11:14 PM</span></div><div class='message-body'></div><div class='embed' style='border-left: 4px solid #5865f2;'><div class='embed-content'><div class='embed-author'><span class='embed-author-name'></span></div><div class='embed-title'>Login Troubleshooting</div><div class='embed-description'>Please try the following steps:<br>1. Reset password<br>2. Clear cache</div><div class='embed-fields'><div class='embed-field'><div class='embed-field-name'>Step 1</div><div class='embed-field-value'>Click <a href="https://example.com" target="_blank">here</a> to reset.</div></div><div class='embed-field'><div class='embed-field-name'>Step 2</div><div class='embed-field-value'>Settings &gt; Privacy &gt; Clear</div></div></div><div class='embed-footer'><span class='embed-footer-text'>Automated Response</span></div></div></div></div></div><div class='message-group' id='message-5'><img src='https://cdn.discordapp.com/embed/avatars/1.png' class='author-avatar' alt='Support Bot'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Support Bot</span><span class='bot-tag'><svg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path fill='white' fill-rule='evenodd' d='M19.06 6.94a1.5 1.5 0 0 1 0 2.12l-8 8a1.5 1.5 0 0 1-2.12 0l-4-4a1.5 1.5 0 0 1 2.12-2.12L10 13.88l6.94-6.94a1.5 1.5 0 0 1 2.12 0Z' clip-rule='evenodd'></path></svg><span class='bot-tag-text'>APP</span></span><span class='timestamp'>01/25/2026, 11:24 PM</span></div><div class='message-body'>This message uses the new <b>Container</b> component:</div><div class='discord-container'>**Container Title**
+This is content inside a container.
+It has a different style than embeds.</div></div></div><div class='message-group' id='message-6'><img src='https://cdn.discordapp.com/embed/avatars/1.png' class='author-avatar' alt='Support Bot'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Support Bot</span><span class='bot-tag'><svg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path fill='white' fill-rule='evenodd' d='M19.06 6.94a1.5 1.5 0 0 1 0 2.12l-8 8a1.5 1.5 0 0 1-2.12 0l-4-4a1.5 1.5 0 0 1 2.12-2.12L10 13.88l6.94-6.94a1.5 1.5 0 0 1 2.12 0Z' clip-rule='evenodd'></path></svg><span class='bot-tag-text'>APP</span></span><span class='timestamp'>01/25/2026, 11:24 PM</span></div><div class='message-body'>This message has interactive <b>components</b>:</div><div class='message-component-group'><button class='discord-button discord-button-primary' type='button' ><img src='https://cdn.discordapp.com/emojis/123456789.webp?size=44&quality=lossless' alt='User' style='width: 16px; height: 16px; margin-right: 8px;'><span>Claim Ticket</span></button><button class='discord-button discord-button-destructive' type='button' ><span style='margin-right: 8px;'>🔒</span><span>Close Ticket</span></button></div><div class='message-component-group'><div class='discord-select-menu' style='background: var(--background-tertiary); padding: 8px 12px; border-radius: 4px; color: var(--text-muted); cursor: pointer; display: flex; justify-content: space-between; align-items: center; min-width: 200px; margin-top: 4px;'><span>Select a category...</span><svg width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M7 10L12 15L17 10H7Z' /></svg></div></div></div></div><div class='message-group' id='message-7'><img src='https://cdn.discordapp.com/embed/avatars/1.png' class='author-avatar' alt='Support Bot'><div class='message-content-wrapper'><div class='message-header'><span class='author-name' >Support Bot</span><span class='bot-tag'><svg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path fill='white' fill-rule='evenodd' d='M19.06 6.94a1.5 1.5 0 0 1 0 2.12l-8 8a1.5 1.5 0 0 1-2.12 0l-4-4a1.5 1.5 0 0 1 2.12-2.12L10 13.88l6.94-6.94a1.5 1.5 0 0 1 2.12 0Z' clip-rule='evenodd'></path></svg><span class='bot-tag-text'>APP</span></span><span class='timestamp'>01/25/2026, 11:24 PM</span></div><div class='message-body'>This message uses V2 Components (Type 17 Container):</div><div class='discord-container'><div class="discord-section"><div class="discord-section-content"><b>Text Display</b> inside container.</div></div><div class="discord-separator" style="height: 1px; margin: 4px 0;"></div><div class="message-component-group"><button class="discord-button discord-button-primary" type="button" ><span style="display: flex; align-items: center;">Button Inside</span></button></div></div></div></div></div></body></html>

@@ -1,0 +1,18 @@
+.github
+.idea
+.vscode
+.gitattributes
+.gitignore
+assets/
+docs/
+tsconfig.json
+tsup-config.json
+package-lock.json
+eslint.config.mjs
+
+# Dev files
+tests/
+scripts/
+test_*.html
+index.ts
+bun.lock
