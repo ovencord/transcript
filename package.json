@@ -1,49 +1,47 @@
 {
-  "name": "@ovencord/transcript",
-  "version": "1.0.3",
-  "description": "Ultrafast, zero-dependency Discord HTML transcript generator exclusively for the Bun ecosystem.",
-  "module": "src/index.ts",
-  "main": "src/index.ts",
-  "type": "module",
-  "author": {
-    "name": "Luigi Colantuono",
-    "url": "https://github.com/LuigiColantuono"
-  },
-  "homepage": "https://github.com/ovencord",
-  "license": "MIT",
-  "funding": {
-    "type": "individual",
-    "url": "https://paypal.me/l0g4n7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ovencord/transcript.git"
-  },
-  "keywords": [
-    "discord",
-    "transcript",
-    "bun",
-    "html",
-    "generator",
-    "performance",
-    "zero-dependency",
-    "discord-v2"
-  ],
-  "scripts": {
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "eslint": "^9.39.2",
-    "globals": "^17.2.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
-  },
-  "dependencies": {
-    "@ovencord/mustache": "^1.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@ovencord/transcript",
+	"version": "1.0.3",
+	"description": "Ultrafast, zero-dependency Discord HTML transcript generator exclusively for the Bun ecosystem.",
+	"module": "src/index.ts",
+	"main": "src/index.ts",
+	"type": "module",
+	"author": {
+		"name": "Luigi Colantuono",
+		"url": "https://github.com/LuigiColantuono"
+	},
+	"homepage": "https://github.com/ovencord",
+	"license": "MIT",
+	"funding": {
+		"type": "individual",
+		"url": "https://paypal.me/l0g4n7"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ovencord/transcript.git"
+	},
+	"keywords": [
+		"discord",
+		"transcript",
+		"bun",
+		"html",
+		"generator",
+		"performance",
+		"zero-dependency",
+		"discord-v2"
+	],
+	"scripts": {
+		"check": "biome check .",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.8",
+		"@types/bun": "latest",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@ovencord/mustache": "^1.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
