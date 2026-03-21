@@ -9,6 +9,7 @@ tsconfig.json
 tsup-config.json
 package-lock.json
 eslint.config.mjs
+biome.json
 
 # Dev files
 tests/
