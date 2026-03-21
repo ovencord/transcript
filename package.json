@@ -1,6 +1,6 @@
 {
 	"name": "@ovencord/transcript",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Ultrafast, zero-dependency Discord HTML transcript generator exclusively for the Bun ecosystem.",
 	"module": "src/index.ts",
 	"main": "src/index.ts",
@@ -36,10 +36,10 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.4.8",
 		"@types/bun": "latest",
-		"typescript": "^5.9.3"
+		"typescript": "5.9.3"
 	},
 	"dependencies": {
-		"@ovencord/mustache": "^1.0.0"
+		"@ovencord/mustache": "1.0.2"
 	},
 	"publishConfig": {
 		"access": "public"
