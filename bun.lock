@@ -5,7 +5,7 @@
     "": {
       "name": "@ovencord/transcript",
       "dependencies": {
-        "@ovencord/mustache": "1.0.2",
+        "@ovencord/mustache": "1.0.3",
       },
       "devDependencies": {
         "@biomejs/biome": "2.4.8",
@@ -33,7 +33,7 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.4.8", "", { "os": "win32", "cpu": "x64" }, "sha512-vAn7iXDoUbqFXqVocuq1sMYAd33p8+mmurqJkWl6CtIhobd/O6moe4rY5AJvzbunn/qZCdiDVcveqtkFh1e7Hg=="],
 
-    "@ovencord/mustache": ["@ovencord/mustache@1.0.2", "", {}, "sha512-d7XmiRpeqeYlktX08U3yPOM+ozuThOeX78PZeJ3lMcR4DikxT2A68qMRzCPul088bOrCtDWkmajHtvAaLCc+8g=="],
+    "@ovencord/mustache": ["@ovencord/mustache@1.0.3", "", {}, "sha512-jGYSAAvMDCBCnx/tO4j4Hz+7L5pSevQTL76WoCSxmFnptNd1rnvs23iZNk3lFxjTTYk50grUokjsiCgt+/b9/A=="],
 
     "@types/bun": ["@types/bun@1.3.11", "", { "dependencies": { "bun-types": "1.3.11" } }, "sha512-5vPne5QvtpjGpsGYXiFyycfpDF2ECyPcTSsFBMa0fraoxiQyMJ3SmuQIGhzPg2WJuWxVBoxWJ2kClYTcw/4fAg=="],
 
