@@ -1,6 +1,14 @@
 # **𝗧 𝗥 𝗔 𝗡 𝗦 𝗖 𝗥 𝗜 𝗣 𝗧**
 
-<p align="left"><a href="https://github.com/sponsors/LuigiColantuono"><img src="https://img.shields.io/github/sponsors/LuigiColantuono?style=social"></a> <a href="https://paypal.me/l0g4n7"><img src="https://img.shields.io/badge/💖-Support-ff69b4"></a> <img src="https://img.shields.io/npm/v/@ovencord/transcript"> <img src="https://img.shields.io/npm/dm/@ovencord/transcript?label=downloads"> <img src="https://img.shields.io/npm/l/@ovencord/transcript"> <img src="https://img.shields.io/github/repo-size/ovencord/transcript"> <a href="https://github.com/ovencord/transcript"><img src="https://img.shields.io/badge/Bun-Networking-black?logo=bun"></a></p>
+<p align="left">
+  <a href="https://paypal.me/l0g4n7"><img src="https://img.shields.io/badge/💖-Support-ff69b4"></a> 
+  <img src="https://img.shields.io/npm/v/@ovencord/transcript"> 
+  <img src="https://img.shields.io/npm/dm/@ovencord/transcript?label=downloads"> 
+  <img src="https://img.shields.io/npm/l/@ovencord/transcript"> 
+  <img src="https://saizu.dev/badge/ovencord/transcript?type=gzip" alt="gzip size">
+  <img src="https://saizu.dev/badge/ovencord/transcript?type=install" alt="install size">
+  <a href="https://github.com/ovencord/transcript">
+</p>
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/70e8758e-f363-478a-a013-fd46ca3cf3ec" alt="@ovencord/transcript Logo" width="180"/>
@@ -29,8 +37,8 @@ Stop simulating browsers to generate simple text logs. **@ovencord/transcript** 
 
 | Package | Size (Unpacked) | Total Files | Dependencies | Install Weight (est.) |
 | :--- | :--- | :--- | :--- | :--- |
-| **discord-html-transcripts** | 170 kB | 87 | React, JSDOM, etc. | **~25.000 kB (25MB)** |
-| **@ovencord/transcript** | 33.8 kB | 8 | **NONE** (Native) | **~34 kB** |
+| **discord-html-transcripts** | ~166 kB | 87 | React, JSDOM, etc. | **~25.000 kB (25MB)** |
+| **@ovencord/transcript** | ~60 kB | 8 | **NONE** (Native) | **~60 kB** |
 
 > **Result: 99.8% savings on total installation weight!**
 
