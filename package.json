@@ -1,6 +1,6 @@
 {
 	"name": "@ovencord/transcript",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Ultrafast, zero-dependency Discord HTML transcript generator exclusively for the Bun ecosystem.",
 	"module": "src/index.ts",
 	"main": "src/index.ts",
